@@ -5,6 +5,8 @@
 set1 <- unique(c(1, 2, 3, 3, 4, 5))
 print(set1)  # Output: 1 2 3 4 5
 
+# Creating sets 
+
 # Union (union) Returns all unique elements from both sets.
 set1 <- c(1, 2, 3)
 set2 <- c(3, 4, 5)
@@ -13,7 +15,8 @@ print(union(set1, set2))  # Output: 1 2 3 4 5
 # Intersection (intersect) Returns common elements between two sets.
 intersect(set1, set2)  # Output: 3
 
-#Set Difference (setdiff) Elements in one set but not the other.
+# Set Difference (setdiff) Elements in one set but not the other.
+# Order the sets passed in is important here
 setdiff(set1, set2)  # Output: 1 2
 setdiff(set2, set1)  # Output: 4 5
 
