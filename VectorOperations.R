@@ -2,6 +2,18 @@
 assign('product', c('apple', 'cookie', 'lemon', 'pizza'))
 product
 
+# Numeric Vector
+num_vec <- c(1, 2, 3.5, 4.7)
+print(num_vec)  # Output: 1.0 2.0 3.5 4.7
+
+# Character Vector
+int_vec <- c(1L, 2L, 3L)  # 'L' specifies integers
+print(int_vec)  # Output: 1 2 3
+
+# Logical Vector
+log_vec <- c(TRUE, FALSE, TRUE)
+print(log_vec)  # Output: TRUE FALSE TRUE
+
 #vector operations
 price <- c(1.3,2,0.5,9)
 full_price <- price
