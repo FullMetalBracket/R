@@ -1,0 +1,2 @@
+# A matrix in R is a two-dimensional data structure where all elements must be of the same data type (numeric, character, or logical).
+# Matrices are primarily used for mathematical operations such as linear algebra, transformations, and statistics.
