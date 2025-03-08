@@ -27,6 +27,9 @@ store_a <- c(7, 5, 3, 6, 9 ,4)
 store_b <- c(2, 5, 6, 4, 8, 3)
 store_quantity <- cbind(store_a, store_b)
 
+# you can also use rbind
+# you can use rbind and cbind to augment existing matrixs
+
 
 # Naming Rows and Columns
 rownames(mat) <- c("Row1", "Row2", "Row3")
@@ -77,6 +80,11 @@ mat %*% mat
 # Transpose a Matrix - swap rows and columms
 t(mat)
 
+# calculations on rows and columns
+rowSums(store_quantity)
+colSums(store_quantity)
+store_quantity -- matrix_quantity
+
 
 # Check Matrix Properties
 dim(mat)     # Get dimensions (rows, cols)
@@ -100,7 +108,7 @@ print(mat_df)
 matrix(0, nrow = 3, ncol = 3)  # Zero matrix
 matrix(1, nrow = 3, ncol = 3)  # Ones matrix
 
-# Identity Matrix
+# Identity Matrix - good in algebra
 diag(3)
 # Output:
 #      [,1] [,2] [,3]
