@@ -21,7 +21,7 @@ dataset
 
 #looking at the data
 names(shopping_data)
-dim(shopping_data)
+dim(shopping_data) # dimensions of dataframe
 head(shopping_data)
 tail(shopping_data)
 head(shopping_data, n = 2)
