@@ -123,3 +123,6 @@ diag(c(1, 2, 3))
 [2,]    0    2    0
 [3,]    0    0    3
 
+# Comparing Matrices - element-wise comparison
+mat == mat2
+identical(mat, mat2)

@@ -1,5 +1,5 @@
 # In R, factors are used to represent categorical data (e.g., gender, colors, or categories in survey responses).
-# Factors store categorical variables as levels rather than raw values, 
+# Factors store categorical variables as levels rather than raw values, ie integers are mapped to the levels
 # which makes them useful for statistical modeling and analysis.
 
 # Memory Efficient: Factors store unique values as levels, reducing memory usage.
@@ -7,11 +7,12 @@
 # Prevents Invalid Entries: Limits inputs to defined categories.
 
 # -- CREATING A FACTOR
-gender <- factor(c("Male", "Female", "Male", "Female", "Male"))
+categories <- c("Male", "Female", "Male", "Female", "Male")
+gender <- factor(categories)
 print(gender)
 
 # Output:
-# [1] Male   Female Male   Female Male  
+# [1] Male   Female Male   Female Male
 # Levels: Female Male
 
 
@@ -19,14 +20,18 @@ print(gender)
 levels(gender)
 # Output: [1] "Female" "Male"
 
+unclass(gender) # Returns the integer representation of the factor
+# Output: [1] 2 1 2 1
+
 
 # -- SETTING THE ORDER OF LEVELS
-size <- factor(c("Small", "Large", "Medium", "Small", "Large"), 
-               levels = c("Small", "Medium", "Large"), ordered = TRUE)
+size <- factor(c("Small", "Large", "Medium", "Small", "Large"),
+  levels = c("Small", "Medium", "Large"), ordered = TRUE
+)
 print(size)
 
 # Output:
-# [1] Small  Large  Medium Small  Large 
+# [1] Small  Large  Medium Small  Large
 # Levels: Small < Medium < Large
 
 
@@ -62,7 +67,7 @@ is.factor(gender)
 levels(gender) <- c("Female", "Male", "Other")
 print(gender)
 
-# renaming factor levels 
+# renaming factor levels
 levels(gender) <- c("F", "M")
 print(gender)
 # Output: [1] M F M F M
@@ -70,7 +75,7 @@ print(gender)
 
 # Dropping Unused Levels
 gender <- factor(gender, levels = c("Male", "Female", "Other"))
-gender <- droplevels(gender)  # Removes "Other" since it's unused
+gender <- droplevels(gender) # Removes "Other" since it's unused
 levels(gender)
 # Output: [1] "Female" "Male"
 
@@ -87,5 +92,3 @@ print(df)
 # 1  Alice Female
 # 2    Bob   Male
 # 3 Charlie   Male
-
-
